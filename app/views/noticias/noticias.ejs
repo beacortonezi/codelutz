@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LUTZ</title>
+</head>
+<body>
+
+<h1>LUTZ - Notícias</h1>
+<table>
+	<tr>
+		<td>ID</td>
+		<td>Título</td>
+		<td>Descrição</td>
+	</tr>
+	<% for (var i=0; i<noticias.length; i++) { %>
+	<tr>
+		<td><%=noticias[i].id_noticia %></td>
+		<td><%=noticias[i].titulo %></td>
+		<td><%=noticias[i].descricao %></td>
+	</tr>
+	<% } %>
+</table>
+
+</body>
+</html>
