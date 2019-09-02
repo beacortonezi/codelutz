@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap');
+
+@font-face{
+	font-family: edo_sz;
+	src: url('../fonts/edosz.ttf');
+}
+
+.form_buscar{
+	width: 100vw;
+	height: 10vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 1.5rem;
+	background-color: #BCA5CF;
+}
+
+.buscar{
+	width: 80vw;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	background-color: #D9BBDB;
+	border-radius: 3px;
+	margin-top: 0.2rem;
+	margin-bottom: 0.1rem;
+}
+
+.form_buscar_input{
+	width: 68vw;
+	height: 4vh;
+	font-size: 15px;
+	margin-right: 10px;
+	background-color: #D9BBDB;
+	border: none;
+}
+
+::-webkit-input-placeholder{
+	color: #783A93;
+}
+
+.form_buscar_img{
+	width: 5vw;
+	margin-top: 2px;
+}
+
+.form_label{
+	font-size: 15px;
+	color: #783A93;
+	font-weight: 600;
+	margin-left: 10px;
+}

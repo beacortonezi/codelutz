@@ -26,7 +26,7 @@ module.exports.noticias_salvar = function(app, req, res){
 	});
 }
 
-module.exports.noticias_editar = function(req, res){
+module.exports.noticias_editar = function(app, req, res){
 	var noticia = req.body;
 	var id_noticia = req.body.id_noticia;
 
@@ -46,7 +46,8 @@ module.exports.noticias_editar = function(req, res){
 	var connection = app.config.dbConnection();
 	var noticiasModel = new app.app.models.NoticiasDAO(connection);
 
-	noticiasModel.editarNoticia(noticia, noticiasModel.mostrarNoticia(id_noticia, function(error, result){
+	noticiasModel.editarNoticia(noticia, 
+		noticiasModel.mostrarNoticia(id_noticia, function(error, result){
 		res.redirect('/noticia?id_noticia =' + id_noticia);
 	}));
 }

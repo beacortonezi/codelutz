@@ -27,7 +27,7 @@ NoticiasDAO.prototype.excluirNoticia = function(id_noticia, callback){
 }
 
 NoticiasDAO.prototype.editarNoticia = function(noticia, callback){
-	this._connection.query('update noticias set titulo =' + noticia.titulo +', descricao = '+ noticia.descricao +', autor = '+ noticia.autor +', noticia = '+ noticia.noticia +' where id_noticia = '+ noticia.id_noticia, callback);
+	this._connection.query("update noticias set titulo ='" + noticia.titulo + "', descricao = '" + noticia.descricao + "', autor = '" + noticia.autor + "', noticia = '" + noticia.noticia + "' where id_noticia = " + noticia.id_noticia, callback);
 }
 
 NoticiasDAO.prototype.mostrarNoticia = function(id_noticia, callback){

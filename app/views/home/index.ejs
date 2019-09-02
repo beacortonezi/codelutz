@@ -2,107 +2,147 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.ico" />
 
     <title>LUTZ</title>
-    
-    <!-- JQuery -->
+
     <script src="js/jquery-3.3.1.js"></script>
-
-    <!-- bootstrap - link cdn -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  
-    <!-- incluindo css -->
     <link href="css/style.css" rel="stylesheet">
-
-    <!-- favicon -->
-    <link rel="shortcut icon" href="images/favicon.ico" />
   </head>
 
   <body>
+    <header>
+      <div class="cabecalho">
 
-    <nav class="navbar navbar-default navbar-static-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          
-          <img src="images/logo.png" class="logo"/>
+        <div class="menu-icon">
+          <a href="#" id="btn">
+            <div id="linha-1"></div>
+            <div id="linha-2"></div>
+            <div id="linha-3"></div>
+          </a>
         </div>
 
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="index.html">HOME</a></li>
+        <div class="logo">
+          <img src="images/logo.png">
+        </div> 
+
+        <div class="login">
+          <a href="login.ejs">
+            <img src="images/login.png">
+          </a>
+        </div>  
+
+      </div>
+
+      <nav class ="hidden">
+        <a href="#" id="close"> X </a>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Administrador</a></li>
           </ul>
-        </div>
-      </div>
-    </nav>
+      </nav>
 
+    </header>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-4 col-md-4 col-lg-3">
-        <div class="noticia_wrapper">
-          <a href="noticia?id_noticia = <%=noticias[0].id_noticia%>" class="noticia_titulo"><%=noticias[0].titulo%></a>
-          <span class="noticia_autor"><%=noticias[0].autor%></span>
-          <span class="noticia_data"><%=noticias[0].data_criacao%></span>
-          <p class="noticia_descricao">
-            <%=noticias[0].descricao%>
-          </p>
-        </div>
-      </div>
+    <main>
 
-      <div class="col-sm-4 col-md-4 col-lg-3">
-        <div class="noticia_wrapper">
-          <a href="noticia?id_noticia = <%=noticias[1].id_noticia%>" class="noticia_titulo"><%=noticias[1].titulo%></a>
-          <span class="noticia_autor"><%=noticias[1].autor%></span>
-          <span class="noticia_data"><%=noticias[1].data_criacao%></span>
-          <p class="noticia_descricao">
-            <%=noticias[1].descricao%>
-          </p>
-        </div>
-      </div>
-
-      <div class="col-sm-4 col-md-4 col-lg-3">
-        <div class="noticia_wrapper">
-          <a href="noticia?id_noticia = <%=noticias[2].id_noticia%>" class="noticia_titulo"><%=noticias[2].titulo%></a>
-          <span class="noticia_autor"><%=noticias[2].autor%></span>
-          <span class="noticia_data"><%=noticias[2].data_criacao%></span>
-          <p class="noticia_descricao">
-            <%=noticias[2].descricao%>
-          </p>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="row">
-      <% for (var i=3; i<noticias.length; i++) { %>
-        <div class="col-sm-4 col-md-4 col-lg-3">
-          <div class="noticia_wrapper">
-            <a href="noticia?id_noticia = <%=noticias[i].id_noticia%>" class="noticia_titulo"><%=noticias[i].titulo%></a>
-            <span class="noticia_autor"><%=noticias[i].autor%></span>
-            <span class="noticia_data"><%=noticias[i].data_criacao%></span>
-            <p class="noticia_descricao">
-              <%=noticias[i].descricao%>
-            </p>
+      <div class="form_buscar">
+        <form action="/busca" method="post">
+          <div class="buscar">
+            <input type="text" class="form_buscar_input" placeholder="O que deseja encontrar?" name="pesquisa"></input>
+            <button type="submit" class="form_buscar_btn" value="Buscar">
+              <img class="form_buscar_img" src="images/search.png">
+            </button>
           </div>
+        </form>
       </div>
-      <% } %>
-    </div> 
-      
 
-    <div class="row ver_mais">
-      <button type="button" class="btn btn-default"><a href="noticias">Ver todas as notícias</a></button>
-      <button type="button" class="btn btn-default"><a href="form_add_noticia">Inserir notícia</a></button>
-    </div>
+      <div class="container"> 
+        <div class="row">
+          <a href="noticia?id_noticia = <%=noticias[0].id_noticia%>">
+            <div class="noticia_wrapper" href="noticia?id_noticia = <%=noticias[0].id_noticia%>">
+              <div class="noticia_wrapper_img">
+                <img class="noticia_wrapper_img" src="images/noticia.png">
+              </div> 
 
-  </div>
-  
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-  
+              <div class="noticia_wrapper_brush">
+                <h1 class="noticia_titulo"><%=noticias[0].titulo%></h1>
+                <p class="noticia_descricao">
+                  <%=noticias[0].descricao%>
+                </p>
+                <p class="noticia_data">Em <%=noticias[0].data_criacao%></p>
+                <p class="noticia_autor">Por <%=noticias[0].autor%></p>
+                <img src="images/bg_brush.svg">
+              </div>
+            </div>
+          </a>
+
+          <a href="noticia?id_noticia = <%=noticias[1].id_noticia%>">
+            <div class="noticia_wrapper" href="noticia?id_noticia = <%=noticias[1].id_noticia%>">
+              <div class="noticia_wrapper_img">
+                <img class="noticia_wrapper_img" src="images/noticia.png">
+              </div> 
+
+              <div class="noticia_wrapper_texts">
+                <h1 class="noticia_titulo"><%=noticias[1].titulo%></h1>
+                <p class="noticia_descricao">
+                  <%=noticias[1].descricao%>
+                </p>
+                <p class="noticia_data">Em <%=noticias[1].data_criacao%></p>
+                <p class="noticia_autor">Por <%=noticias[1].autor%></p>
+              </div>
+            </div>
+          </a>
+
+          <a href="noticia?id_noticia = <%=noticias[2].id_noticia%>">
+            <div class="noticia_wrapper" href="noticia?id_noticia = <%=noticias[2].id_noticia%>">
+              <div class="noticia_wrapper_img">
+                <img class="noticia_wrapper_img" src="images/noticia.png">
+              </div> 
+
+              <div class="noticia_wrapper_texts">
+                <h1 class="noticia_titulo"><%=noticias[2].titulo%></h1>
+                <p class="noticia_descricao">
+                  <%=noticias[2].descricao%>
+                </p>
+                <p class="noticia_data">Em <%=noticias[2].data_criacao%></p>
+                <p class="noticia_autor">Por <%=noticias[2].autor%></p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="row">
+        <% for (var i=3; i<noticias.length; i++) { %>
+          <a href="noticia?id_noticia = <%=noticias[i].id_noticia%>">
+            <div class="noticia_wrapper" href="noticia?id_noticia = <%=noticias[i].id_noticia%>">
+              <div class="noticia_wrapper_img">
+                <img class="noticia_wrapper_img" src="images/noticia.png">
+              </div> 
+
+              <div class="noticia_wrapper_texts">
+                <h1 class="noticia_titulo"><%=noticias[i].titulo%></h1>
+                <p class="noticia_descricao">
+                  <%=noticias[i].descricao%>
+                </p>
+                <p class="noticia_data">Em <%=noticias[i].data_criacao%></p>
+                <p class="noticia_autor">Por <%=noticias[i].autor%></p>
+              </div>
+            </div>
+          </a>
+        <% } %>
+        </div>
+
+        <div class="row ver_tudo">
+          <button type="button" class="ver_tudo_btn"><a href="noticias">Ver tudo</a></button>
+        </div>
+      </div>
+
+    </main>
+    
+    <script type="text/javascript" src="js/menu.js"></script>
   </body>
 </html>
