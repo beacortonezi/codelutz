@@ -10,10 +10,12 @@
 
     <script src="js/jquery-3.3.1.js"></script>
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
   </head>
 
   <body>
     <header>
+      
       <div class="cabecalho">
 
         <div class="menu-icon">
@@ -39,9 +41,9 @@
       <nav class ="hidden">
         <a href="#" id="close"> X </a>
           <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="#">Sobre</a></li>
-            <li><a href="#">Administrador</a></li>
+            <li><a href="noticias">Administrador</a></li>
           </ul>
       </nav>
 
@@ -62,7 +64,7 @@
 
       <div class="container"> 
         <div class="row">
-          <a href="noticia?id_noticia = <%=noticias[0].id_noticia%>">
+          <a href="noticia?id_noticia=<%=noticias[0].id_noticia%>">
             <div class="noticia_wrapper" href="noticia?id_noticia = <%=noticias[0].id_noticia%>">
               <div class="noticia_wrapper_img">
                 <img class="noticia_wrapper_img" src="images/noticia.png">
@@ -80,7 +82,7 @@
             </div>
           </a>
 
-          <a href="noticia?id_noticia = <%=noticias[1].id_noticia%>">
+          <a href="noticia?id_noticia=<%=noticias[1].id_noticia%>">
             <div class="noticia_wrapper" href="noticia?id_noticia = <%=noticias[1].id_noticia%>">
               <div class="noticia_wrapper_img">
                 <img class="noticia_wrapper_img" src="images/noticia.png">
@@ -97,7 +99,7 @@
             </div>
           </a>
 
-          <a href="noticia?id_noticia = <%=noticias[2].id_noticia%>">
+          <a href="noticia?id_noticia=<%=noticias[2].id_noticia%>">
             <div class="noticia_wrapper" href="noticia?id_noticia = <%=noticias[2].id_noticia%>">
               <div class="noticia_wrapper_img">
                 <img class="noticia_wrapper_img" src="images/noticia.png">
@@ -117,7 +119,7 @@
 
         <div class="row">
         <% for (var i=3; i<noticias.length; i++) { %>
-          <a href="noticia?id_noticia = <%=noticias[i].id_noticia%>">
+          <a href="noticia?id_noticia=<%=noticias[i].id_noticia%>">
             <div class="noticia_wrapper" href="noticia?id_noticia = <%=noticias[i].id_noticia%>">
               <div class="noticia_wrapper_img">
                 <img class="noticia_wrapper_img" src="images/noticia.png">
@@ -136,9 +138,9 @@
         <% } %>
         </div>
 
-        <div class="row ver_tudo">
-          <button type="button" class="ver_tudo_btn"><a href="noticias">Ver tudo</a></button>
-        </div>
+        <button type="button" class="ver_tudo_btn">
+          <a href="noticias">Ver tudo</a>
+        </button>
       </div>
 
     </main>

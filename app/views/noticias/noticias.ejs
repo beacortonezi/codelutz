@@ -10,6 +10,7 @@
 
 	<script src="js/jquery-3.3.1.js"></script>
 	<link href="css/style.css" rel="stylesheet">
+	<link href="css/index.css" rel="stylesheet">
 	<link href="css/noticias.css" rel="stylesheet">
 	</head>
 
@@ -40,9 +41,9 @@
 	  <nav class ="hidden">
 	    <a href="#" id="close"> X </a>
 	      <ul>
-	        <li><a href="#">Home</a></li>
+	        <li><a href="/">Home</a></li>
 	        <li><a href="#">Sobre</a></li>
-	        <li><a href="#">Administrador</a></li>
+	        <li><a href="noticias">Administrador</a></li>
 	      </ul>
 	  </nav>
 
@@ -65,7 +66,7 @@
 
 	    <% if (noticias.length > 0) { %>
 	    	<% for(var i=0; i<noticias.length; i++) { %>
-	          <a href="noticia?id_noticia = <%=noticias[i].id_noticia%>">
+	          <a href="noticia?id_noticia=<%=noticias[i].id_noticia%>">
 	            <div class="noticia_wrapper" href="noticia?id_noticia = <%=noticias[i].id_noticia%>">
 	              <div class="noticia_wrapper_img">
 	                <img class="noticia_wrapper_img" src="images/noticia.png">
@@ -83,7 +84,11 @@
 	            </div>
 	          </a>
 	    	<% } %>
-	    <% } %>	    	
+	    <% } %>	    
+
+	    	<button type="button" class="form_add_btn">
+	    		<a href="form_add_noticia">Inserir</a>
+	    	</button>	
 	    </div>
 
 	</main>

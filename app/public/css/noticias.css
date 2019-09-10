@@ -5,6 +5,7 @@
 	src: url('../fonts/edosz.ttf');
 }
 
+/* buscar */
 .form_buscar{
 	width: 100vw;
 	height: 10vh;
@@ -16,33 +17,7 @@
 }
 
 .buscar{
-	width: 80vw;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-	background-color: #D9BBDB;
-	border-radius: 3px;
-	margin-top: 0.2rem;
-	margin-bottom: 0.1rem;
-}
-
-.form_buscar_input{
-	width: 68vw;
-	height: 4vh;
-	font-size: 15px;
-	margin-right: 10px;
-	background-color: #D9BBDB;
-	border: none;
-}
-
-::-webkit-input-placeholder{
-	color: #783A93;
-}
-
-.form_buscar_img{
-	width: 5vw;
-	margin-top: 2px;
+	margin-bottom: 0.3rem;
 }
 
 .form_label{
@@ -51,3 +26,22 @@
 	font-weight: 600;
 	margin-left: 10px;
 }
+
+/* botões */
+.form_add_btn{
+	width: 120px;
+	height: 40px;
+	background-color: #783a93;
+	border: none;
+	border-radius: 10px;
+	font-family: 'edo_sz';
+	font-size: 30px;
+	margin: 0rem 0rem 1.5rem;
+}
+
+.form_add_btn a{
+	color: #f9c6e2;
+}
+
+
+
