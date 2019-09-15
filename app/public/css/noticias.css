@@ -8,40 +8,46 @@
 /* buscar */
 .form_buscar{
 	width: 100vw;
-	height: 10vh;
+	height: 9vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-bottom: 1.5rem;
-	background-color: #BCA5CF;
+	margin-bottom: 1rem;
+	background-color: #D9BBDB;
 }
 
 .buscar{
-	margin-bottom: 0.3rem;
+	width: 80vw;
+	border: solid 1px;
+	border-color: #783A93;
+	border-radius: 3px;
 }
 
-.form_label{
-	font-size: 15px;
+.form_buscar_label{
+	font-size: 16px;
+	font-weight: 400;
 	color: #783A93;
-	font-weight: 600;
-	margin-left: 10px;
 }
 
 /* botões */
-.form_add_btn{
-	width: 120px;
-	height: 40px;
-	background-color: #783a93;
-	border: none;
-	border-radius: 10px;
-	font-family: 'edo_sz';
-	font-size: 30px;
-	margin: 0rem 0rem 1.5rem;
+.add_btn_div{
+	margin: 0rem 10% 1rem;
 }
 
-.form_add_btn a{
-	color: #f9c6e2;
+.add_btn{
+	display: flex;
+	align-items: center;
 }
 
+.add_btn img{
+	height: 22px;
+	margin-right: 0.5rem;
+}
+
+.add_btn_label{
+	font-size: 22px;
+	font-weight: 300;
+	color: #783a93;
+}
 
 

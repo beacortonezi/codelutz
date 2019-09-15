@@ -10,7 +10,6 @@
 	font-size: 40px;
 	color: #783a93;
 	margin: 0 0.5rem;
-	text-shadow: #f9c6e2 2px 2px 1px;
 	text-align: center;
 }
 
@@ -45,33 +44,42 @@
 }
 
 /* botões */
-.update_btn{
-	width: 120px;
-	height: 40px;
-	background-color: #783a93;
-	border: none;
-	border-radius: 10px;
-	font-family: 'edo_sz';
-	font-size: 30px;
-	margin: 0rem 0rem 1.5rem;
+.update_btn_div{
+	margin: 0rem 10% 1rem;
 }
 
-.update_btn a{
-	color: #f9c6e2;
+.update_btn{
+	display: flex;
+	align-items: center;
+}
+
+.update_btn img{
+	height: 24px;
+	margin-right: 0.5rem;
+}
+
+.update_btn_label{
+	font-size: 24px;
+	font-weight: 300;
+	color: #783a93;
+}
+
+.excluir_btn_div{
+	margin: 0rem 10% 1.5rem;
 }
 
 .excluir_btn{
-	width: 120px;
-	height: 40px;
-	background-color: #783a93;
-	border: none;
-	border-radius: 10px;
-	font-family: 'edo_sz';
-	font-size: 30px;
-	margin: 0rem 0rem 1.5rem;
+	display: flex;
+	align-items: center;
 }
 
-.excluir_btn a{
-	color: #f9c6e2;
+.excluir_btn img{
+	height: 24px;
+	margin-right: 0.5rem;
 }
 
+.excluir_btn_label{
+	font-size: 24px;
+	font-weight: 300;
+	color: #783a93;
+}

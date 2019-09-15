@@ -27,7 +27,7 @@
         </div>
 
         <div class="logo">
-          <img src="images/logo.png">
+          <img src="images/logo.svg">
         </div> 
 
         <div class="login">
@@ -65,25 +65,24 @@
       <div class="container"> 
         <div class="row">
           <a href="noticia?id_noticia=<%=noticias[0].id_noticia%>">
-            <div class="noticia_wrapper" href="noticia?id_noticia = <%=noticias[0].id_noticia%>">
+            <div class="noticia_wrapper" href="noticia?id_noticia=<%=noticias[0].id_noticia%>">
               <div class="noticia_wrapper_img">
                 <img class="noticia_wrapper_img" src="images/noticia.png">
               </div> 
 
-              <div class="noticia_wrapper_brush">
+              <div class="noticia_wrapper_texts">
                 <h1 class="noticia_titulo"><%=noticias[0].titulo%></h1>
                 <p class="noticia_descricao">
                   <%=noticias[0].descricao%>
                 </p>
                 <p class="noticia_data">Em <%=noticias[0].data_criacao%></p>
                 <p class="noticia_autor">Por <%=noticias[0].autor%></p>
-                <img src="images/bg_brush.svg">
               </div>
             </div>
           </a>
 
           <a href="noticia?id_noticia=<%=noticias[1].id_noticia%>">
-            <div class="noticia_wrapper" href="noticia?id_noticia = <%=noticias[1].id_noticia%>">
+            <div class="noticia_wrapper" href="noticia?id_noticia=<%=noticias[1].id_noticia%>">
               <div class="noticia_wrapper_img">
                 <img class="noticia_wrapper_img" src="images/noticia.png">
               </div> 
@@ -96,11 +95,11 @@
                 <p class="noticia_data">Em <%=noticias[1].data_criacao%></p>
                 <p class="noticia_autor">Por <%=noticias[1].autor%></p>
               </div>
-            </div>
+          </div>
           </a>
 
           <a href="noticia?id_noticia=<%=noticias[2].id_noticia%>">
-            <div class="noticia_wrapper" href="noticia?id_noticia = <%=noticias[2].id_noticia%>">
+            <div class="noticia_wrapper" href="noticia?id_noticia=<%=noticias[2].id_noticia%>">
               <div class="noticia_wrapper_img">
                 <img class="noticia_wrapper_img" src="images/noticia.png">
               </div> 
@@ -113,14 +112,14 @@
                 <p class="noticia_data">Em <%=noticias[2].data_criacao%></p>
                 <p class="noticia_autor">Por <%=noticias[2].autor%></p>
               </div>
-            </div>
+          </div>
           </a>
         </div>
 
         <div class="row">
         <% for (var i=3; i<noticias.length; i++) { %>
           <a href="noticia?id_noticia=<%=noticias[i].id_noticia%>">
-            <div class="noticia_wrapper" href="noticia?id_noticia = <%=noticias[i].id_noticia%>">
+            <div class="noticia_wrapper" href="noticia?id_noticia=<%=noticias[i].id_noticia%>">
               <div class="noticia_wrapper_img">
                 <img class="noticia_wrapper_img" src="images/noticia.png">
               </div> 
@@ -138,10 +137,9 @@
         <% } %>
         </div>
 
-        <button type="button" class="ver_tudo_btn">
-          <a href="noticias">Ver tudo</a>
-        </button>
-      </div>
+        <div class="div_ver_tudo_btn">
+          <button href="noticias" class="ver_tudo_btn">Ver tudo</button>
+        </div>
 
     </main>
     

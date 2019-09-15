@@ -49,6 +49,7 @@ module.exports.noticias_editar = function(app, req, res){
 	noticiasModel.editarNoticia(noticia, 
 		noticiasModel.mostrarNoticia(id_noticia, function(error, result){
 		res.redirect('/noticia?id_noticia =' + id_noticia);
+		
 	}));
 }
 

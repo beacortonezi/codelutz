@@ -31,7 +31,7 @@ a{
 	text-decoration: none;
 }
 
-/*estilo menu-icon*/ 
+/* estilo menu-icon */ 
 #btn{
 	display: block;
 	height: 35px;
@@ -45,7 +45,7 @@ a{
 }
 
 .menu-icon [id^="linha"]{
-	background: #f9c6e2;
+	background: #F9C6E2;
 	border-radius: 5px;
 	height: 5px;
 	margin-bottom: 8px;
@@ -95,11 +95,11 @@ nav.active{
 
 /* botão menu deslizante */
 #close{
-	color: #f9c6e2;
+	color: #fff;
 	font-size: 1.5rem;
 	position: absolute;
 	right: 2rem;
-	top: 2rem;
+	top: 2.5rem;
 }
 
 /* cabeçalho */
@@ -113,12 +113,13 @@ nav.active{
 }
 
 .logo{
-	height: 65px;
+	height: 80%;
+	width: 60%;
 }
 
 .logo img{
-	max-height: 65px;
-    width: auto;
+	height: 100%;
+    width: 100%;
 }
 
 .login{
@@ -126,7 +127,7 @@ nav.active{
 }
 
 .login img{
-	max-height: 35px;
+	height: 35px;
 	width: auto;
 }
 
@@ -138,24 +139,23 @@ nav.active{
 	align-items: center;
 	justify-content: center;
 	margin-bottom: 1.5rem;
-	background-color: #BCA5CF;
 }
 
 .buscar{
-	width: 80vw;
-	height: 4vh;
+	width: 100vw;
+	height: 5vh;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
 	background-color: #D9BBDB;
-	border-radius: 3px;
 }
 
 .form_buscar_input{
 	width: 70vw;
-	height: 4vh;
-	font-size: 15px;
+	height: 5vh;
+	font-size: 18px;
+	font-weight: 300;
 	background-color: #D9BBDB;
 	border: none;
 }
@@ -165,29 +165,25 @@ nav.active{
 }
 
 .form_buscar_btn{
-	width: 6vw;
-	height: 4vh;
+	width: 9vw;
+	height: 5vh;
 	background-color: #D9BBDB;
 	border: none;
-
-}
-
-.form_buscar_btn button{
-	width: 6vw;
-	height: 4vh;
-	background-color: #D9BBDB;
-	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .form_buscar_img{
-	width: 5.5vw;
+	width: auto;
+	height: 3.5vh;
 }
 
 .form_buscar_img img{
-	width: 5.5vw;
+	width: auto;
+	height: 3.5vh;
 }
 
-/* container */
 .container{
 	display: flex;
 	flex-direction: column;

@@ -9,10 +9,8 @@
 	font-family: 'edo_sz';
 	font-size: 35px;
 	color: #783a93;
-	text-shadow: #f9c6e2 2px 2px 1px;
-	margin: 0rem 0rem 0.1rem;
 	text-align: center;
-	margin: 0rem 0rem 1rem;
+	margin: 0rem 0rem 1.5rem;
 }
 
 /* form_add_noticia */
@@ -29,7 +27,6 @@
 	font-family: 'edo_sz';
 	font-size: 30px;
 	color: #783a93;
-	text-shadow: #f9c6e2 2px 2px 1px;
 	margin: 0rem 0rem 0.1rem;
 }
 
@@ -61,16 +58,23 @@
 }
 
 /* botão update */
-.form_update_btn{
-	width: 120px;
-	height: 40px;
+.div_update_btn{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.update_btn{
+	width: 150px;
+	height: 50px;
 	background-color: #783a93;
 	border: none;
 	border-radius: 10px;
 	font-family: 'edo_sz';
-	font-size: 30px;
-	color: #f9c6e2;
-	margin: 0rem 0rem 1.5rem;
+	font-size: 33px;
+	color: #fff;
+	margin: 0rem 0rem 1rem;
+	box-shadow:  0 0 5px #8c959a;
 }
 
 
